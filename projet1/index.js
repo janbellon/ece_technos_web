@@ -5,7 +5,12 @@ app.use(express.json())
 app.use(express.text())
 
 app.get("/message", (_, res) => {
-    res.status(200).json({"message": "Hello World !"});
+    const messages = [
+        "J'aime les patates",
+        "XPTDR",
+        "Tomate cerise"
+    ]
+    res.status(200).json({"message": messages[Math.floor(Math.random() * messages.length)]});
 })
 
 app.get("/id/:id", (req, res) => {
