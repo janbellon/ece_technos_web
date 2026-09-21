@@ -1,9 +1,12 @@
 import './MyApp.css'
 import Button from './components/button.jsx'
+import Title from './components/title.jsx'
+import ApiData from './components/apidata.jsx'
 
 const MyApp = () => (
     <div>
-        <h1>BONJOUR</h1>
+        <Title />
+        <ApiData />
         <Button />
     </div>
 )
