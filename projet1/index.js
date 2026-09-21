@@ -1,6 +1,6 @@
 import express from "express"
 
-const cors = (req,res,next) => {
+const cors = (_,res,next) => {
     res.set('Access-Control-Allow-Origin', '*')
     res.set('Access-Control-Allow-Methods', '*')
     res.set('Access-Control-Allow-Headers', 'Content-Type, x-api-key')
@@ -8,7 +8,7 @@ const cors = (req,res,next) => {
 }
 
 const app = express();
-app.use(cors())
+app.use(cors)
 app.use(express.json())
 app.use(express.text())
 
